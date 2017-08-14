@@ -1,0 +1,4 @@
+src_folder: /Users/srikarachanta/Downloads/
+src_file: AppServerAgent-4.2.15.3.zip
+dest_folder: /home/vagrant/appdynamics/javaagent/
+dest_file: AppServerAgent.zip

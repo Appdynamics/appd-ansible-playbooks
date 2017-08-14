@@ -1,0 +1,9 @@
+
+# An availability status for NFS mounts is reported by executing the command `df | grep <fileSystem> | wc -l`.
+# displayName: the name with which the metric is reported in AppD Metric Browser. If empty, metric is reported with fileSystem as its name.
+mountedNFS:
+      - fileSystem: "/ngs/app/rosp"
+        displayName: "ROSPhome"
+
+
+metricPrefix: "Custom Metrics|Linux|"

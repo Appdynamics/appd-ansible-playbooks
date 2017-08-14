@@ -1,0 +1,13 @@
+- include_vars: vars/configure_javaagent_vars.yml
+- name: Gathering facts
+  setup:
+- name: Install controller-info.xml for java-agent
+  template: src=javaagent-controller-info.xml.j2 dest={{ dest_conf_folder }}/controller-info.xml
+- name: Install app-agent-config.xml for java-agent
+  copy: src=app-agent-config.xml dest={{ dest_conf_folder }}/
+- name: Install custom-activity-correlation.xml for java-agent
+  copy: src=custom-activity-correlation.xml dest={{ dest_conf_folder }}/
+- name: Install custom-interceptors.xml for java-agent
+  copy: src=custom-interceptors.xml dest={{ dest_conf_folder }}/
+- name: Install log4j.xml
+  copy: src=log4j.xml dest={{ dest_conf_folder }}/logging/

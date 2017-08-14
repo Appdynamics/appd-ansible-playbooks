@@ -1,0 +1,32 @@
+- include_vars: vars/install_machineagent_vars.yml
+- name: Gathering facts
+  setup:
+- name: install tools and pre-requisites for RedHat variants
+  yum:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - ntp
+    - vim
+    - java
+    - unzip
+    - libselinux-python
+  when: "ansible_os_family == 'RedHat'"
+- name: install tools and pre-requisites for Debian variants
+  apt:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - ntp
+    - vim
+    - unzip
+    - default-jdk
+  when: "ansible_os_family == 'Debian'"
+- name: Ensures {{dest_folder}} dir exists
+  file: path={{dest_folder}} state=directory
+- name: move files
+  copy: src={{ src_folder }}{{ src_file }} dest={{ dest_folder }}{{ dest_file }} force=no
+- name: Unzip machine agent file
+  unarchive: src={{ dest_folder }}{{ dest_file }} dest={{dest_folder}} copy=no
+- name: Ensure machine agent file is executable
+  file: path="{{ dest_folder }}bin/machine-agent" mode=0755

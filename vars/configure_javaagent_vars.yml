@@ -1,0 +1,9 @@
+controller_hostName: 192.168.1.87
+controller_port: 8090
+applicationName: ACMEOnline
+tierName: Inventory
+nodeName: Inventory
+accountName: customer1
+accountAccessKey: 2b24d6b5-3ab9-4f4c-8203-4c6832d6233e
+dest_folder: /home/vagrant/appdynamics/javaagent/
+dest_conf_folder: /home/vagrant/appdynamics/javaagent/ver4.2.15.3/conf

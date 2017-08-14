@@ -1,0 +1,11 @@
+<custom-interceptors>
+    <custom-interceptor>
+        <interceptor-class-name>com.singularity.JettyHandlerInterceptor</interceptor-class-name>
+        <match-class type="matches-class">
+            <name filter-type="equals">org.eclipse.jetty.server.handler.HandlerWrapper</name>
+        </match-class>
+        <match-method>
+            <name>handle</name>
+        </match-method>
+</custom-interceptor>
+</custom-interceptors>

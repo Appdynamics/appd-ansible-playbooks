@@ -1,0 +1,29 @@
+- name: Gathering facts
+  setup:
+- name: install system updates for RedHat variants
+  yum: name=* state=latest update_cache=yes
+  when: "ansible_os_family == 'RedHat'"
+- name: install system updates for Debian variants
+  apt: upgrade=dist update_cache=yes
+  when: "ansible_os_family == 'Debian'"
+- name: install tools and pre-requisites for RedHat variants
+  yum:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - ntp
+    - vim
+    - java
+    - unzip
+    - libselinux-python
+  when: "ansible_os_family == 'RedHat'"
+- name: install tools and pre-requisites for Debian variants
+  apt:
+    name: "{{ item }}"
+    state: installed
+  with_items:
+    - ntp
+    - vim
+    - unzip
+    - default-jdk
+  when: "ansible_os_family == 'Debian'"

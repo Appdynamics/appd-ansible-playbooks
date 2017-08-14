@@ -1,0 +1,11 @@
+- include_vars: vars/start_machineagent_vars.yml
+- name: Gathering facts
+  setup:
+- name: Kill process if running
+  become_user: root
+  shell: kill -9 $(ps aux | grep 'machineagent.jar' | awk '{print $2}')
+  ignore_errors: yes
+- name: Starts the machine agent
+  command: "{{ dest_folder }}bin/machine-agent -Dappdynamics.controller.hostName={{ controller_hostName }} -Dappdynamics.controller.port={{ controller_port }} -Dappdynamics.agent.uniqueHostId={{ ansible_hostname }} -Dappdynamics.agent.accountAccessKey={{ agent_accountAccessKey }} -Dappdynamics.sim.enabled= {{ sim_enabled }}"
+  async: 315360000
+  poll: 0

@@ -1,0 +1,9 @@
+controller_hostName: 192.168.1.87
+controller_port: 8090
+applicationName: ACMEOnline
+agent_tierName: Inventory
+agent_nodeName: Inventory
+agent_accountAccessKey: c68caeaa-fceb-4175-95e8-6a91cbd78af4
+sim_enabled: true
+inventory_dir: /Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/hosts
+dest_folder: /home/vagrant/appdynamics/machineagent/

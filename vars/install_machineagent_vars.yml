@@ -1,0 +1,4 @@
+src_folder: /Users/srikarachanta/Downloads/
+src_file: machineagent-bundle-64bit-linux-4.2.10.0.zip
+dest_folder: /home/vagrant/appdynamics/machineagent/
+dest_file: MachineAgent.zip

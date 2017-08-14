@@ -1,0 +1,282 @@
+2017-08-12 23:39:17,628 p=87970 u=srikarachanta |  ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
+
+The error appears to have been in '/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/roles/configureHost/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  setup:
+- name: create appdy user
+  ^ here
+
+
+The error appears to have been in '/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/roles/configureHost/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  setup:
+- name: create appdy user
+  ^ here
+
+2017-08-13 00:08:41,819 p=92916 u=srikarachanta |  ERROR! conflicting action statements: shell, user
+
+The error appears to have been in '/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/roles/configureHost/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  setup:
+- user:
+  ^ here
+
+
+The error appears to have been in '/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/roles/configureHost/tasks/main.yml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  setup:
+- user:
+  ^ here
+
+2017-08-13 00:16:37,686 p=94526 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] *******************************************************************************************************************************************************************************************
+2017-08-13 00:16:37,719 p=94526 u=srikarachanta |  TASK [configureHost : Gathering facts] *************************************************************************************************************************************************************************************************
+2017-08-13 00:16:38,045 p=94526 u=srikarachanta |  fatal: [test4]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname test4: nodename nor servname provided, or not known\r\n", "unreachable": true}
+2017-08-13 00:16:42,583 p=94526 u=srikarachanta |  ok: [test1]
+2017-08-13 00:16:43,265 p=94526 u=srikarachanta |  ok: [test2]
+2017-08-13 00:16:43,525 p=94526 u=srikarachanta |  ok: [test3]
+2017-08-13 00:16:43,531 p=94526 u=srikarachanta |  TASK [configureHost : install system updates for RedHat variants] **********************************************************************************************************************************************************************
+2017-08-13 00:16:43,554 p=94526 u=srikarachanta |  skipping: [test1]
+2017-08-13 00:16:43,571 p=94526 u=srikarachanta |  skipping: [test2]
+2017-08-13 00:24:33,641 p=94526 u=srikarachanta |  changed: [test3]
+2017-08-13 00:24:33,650 p=94526 u=srikarachanta |  TASK [configureHost : install system updates for Debian variants] **********************************************************************************************************************************************************************
+2017-08-13 00:24:33,684 p=94526 u=srikarachanta |  skipping: [test3]
+2017-08-13 00:27:46,052 p=94526 u=srikarachanta |  ok: [test2]
+2017-08-13 00:27:48,206 p=94526 u=srikarachanta |  ok: [test1]
+2017-08-13 00:27:48,216 p=94526 u=srikarachanta |  TASK [configureHost : install tools and pre-requisites for RedHat variants] ************************************************************************************************************************************************************
+2017-08-13 00:27:48,251 p=94526 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 00:27:48,254 p=94526 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 00:28:15,789 p=94526 u=srikarachanta |  fatal: [test3]: FAILED! => {"failed": true, "msg": "Timeout (12s) waiting for privilege escalation prompt: "}
+2017-08-13 00:28:15,794 p=94526 u=srikarachanta |  TASK [configureHost : install tools and pre-requisites for Debian variants] ************************************************************************************************************************************************************
+2017-08-13 00:28:45,686 p=94526 u=srikarachanta |  ok: [test1] => (item=[u'ntp', u'vim', u'default-jdk'])
+2017-08-13 00:28:46,838 p=94526 u=srikarachanta |  ok: [test2] => (item=[u'ntp', u'vim', u'default-jdk'])
+2017-08-13 00:28:46,844 p=94526 u=srikarachanta |  	to retry, use: --limit @/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/configureHost_playbook.retry
+
+2017-08-13 00:28:46,844 p=94526 u=srikarachanta |  PLAY RECAP *****************************************************************************************************************************************************************************************************************************
+2017-08-13 00:28:46,844 p=94526 u=srikarachanta |  test1                      : ok=3    changed=0    unreachable=0    failed=0   
+2017-08-13 00:28:46,844 p=94526 u=srikarachanta |  test2                      : ok=3    changed=0    unreachable=0    failed=0   
+2017-08-13 00:28:46,844 p=94526 u=srikarachanta |  test3                      : ok=2    changed=1    unreachable=0    failed=1   
+2017-08-13 00:28:46,845 p=94526 u=srikarachanta |  test4                      : ok=0    changed=0    unreachable=1    failed=0   
+2017-08-13 22:25:41,552 p=25815 u=srikarachanta |  ERROR! the playbook: ansible-playbook could not be found
+2017-08-13 22:26:05,270 p=25848 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ********************************************************************************************************************************************
+2017-08-13 22:26:05,319 p=25848 u=srikarachanta |  TASK [install-machineagent : include_vars] **********************************************************************************************************************************************
+2017-08-13 22:26:05,353 p=25848 u=srikarachanta |  ok: [test1]
+2017-08-13 22:26:05,356 p=25848 u=srikarachanta |  ok: [test3]
+2017-08-13 22:26:05,356 p=25848 u=srikarachanta |  ok: [test2]
+2017-08-13 22:26:05,369 p=25848 u=srikarachanta |  ok: [test4]
+2017-08-13 22:26:05,373 p=25848 u=srikarachanta |  TASK [install-machineagent : Gathering facts] *******************************************************************************************************************************************
+2017-08-13 22:26:05,845 p=25848 u=srikarachanta |  fatal: [test4]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname test4: nodename nor servname provided, or not known\r\n", "unreachable": true}
+2017-08-13 22:26:10,380 p=25848 u=srikarachanta |  ok: [test3]
+2017-08-13 22:26:17,140 p=25848 u=srikarachanta |  ok: [test2]
+2017-08-13 22:26:17,332 p=25848 u=srikarachanta |  ok: [test1]
+2017-08-13 22:26:17,337 p=25848 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for RedHat variants] ******************************************************************************************************
+2017-08-13 22:26:17,381 p=25848 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 22:26:17,385 p=25848 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 22:26:35,490 p=25848 u=srikarachanta |   [ERROR]: User interrupted execution
+
+2017-08-13 22:28:05,096 p=26070 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ********************************************************************************************************************************************
+2017-08-13 22:28:05,116 p=26070 u=srikarachanta |  TASK [install-machineagent : include_vars] **********************************************************************************************************************************************
+2017-08-13 22:28:05,147 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:28:05,151 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:28:05,163 p=26070 u=srikarachanta |  ok: [test3]
+2017-08-13 22:28:05,172 p=26070 u=srikarachanta |  ok: [test4]
+2017-08-13 22:28:05,176 p=26070 u=srikarachanta |  TASK [install-machineagent : Gathering facts] *******************************************************************************************************************************************
+2017-08-13 22:28:10,394 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:28:10,397 p=26070 u=srikarachanta |  ok: [test3]
+2017-08-13 22:28:10,806 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:28:10,910 p=26070 u=srikarachanta |  ok: [test4]
+2017-08-13 22:28:10,916 p=26070 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for RedHat variants] ******************************************************************************************************
+2017-08-13 22:28:10,953 p=26070 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 22:28:10,966 p=26070 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 22:28:13,255 p=26070 u=srikarachanta |  failed: [test3] (item=[u'ntp', u'vim', u'java', u'libselinux-python']) => {"changed": false, "failed": true, "item": ["ntp", "vim", "java", "libselinux-python"], "msg": "The following packages have pending transactions: ntp-x86_64", "rc": 125, "results": []}
+2017-08-13 22:29:16,967 p=26070 u=srikarachanta |  changed: [test4] => (item=[u'ntp', u'vim', u'java', u'libselinux-python'])
+2017-08-13 22:29:16,973 p=26070 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for Debian variants] ******************************************************************************************************
+2017-08-13 22:29:17,032 p=26070 u=srikarachanta |  skipping: [test4] => (item=[]) 
+2017-08-13 22:29:22,140 p=26070 u=srikarachanta |  ok: [test1] => (item=[u'ntp', u'vim', u'default-jdk'])
+2017-08-13 22:29:22,258 p=26070 u=srikarachanta |  ok: [test2] => (item=[u'ntp', u'vim', u'default-jdk'])
+2017-08-13 22:29:22,267 p=26070 u=srikarachanta |  TASK [install-machineagent : Ensures /home/vagrant/appdynamics/machineagent/ dir exists] ************************************************************************************************
+2017-08-13 22:29:23,257 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:29:23,285 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:29:24,325 p=26070 u=srikarachanta |  changed: [test4]
+2017-08-13 22:29:24,335 p=26070 u=srikarachanta |  TASK [install-machineagent : move files] ************************************************************************************************************************************************
+2017-08-13 22:29:25,365 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:29:25,567 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:29:48,895 p=26070 u=srikarachanta |  changed: [test4]
+2017-08-13 22:29:48,905 p=26070 u=srikarachanta |  TASK [install-machineagent : Unzip machine agent file] **********************************************************************************************************************************
+2017-08-13 22:29:53,826 p=26070 u=srikarachanta |  fatal: [test4]: FAILED! => {"changed": false, "failed": true, "msg": "Failed to find handler for \"/home/vagrant/appdynamics/machineagent/MachineAgent.zip\". Make sure the required command to extract the file is installed. Command \"unzip\" not found. Command \"/bin/gtar\" could not handle archive."}
+2017-08-13 22:29:57,572 p=26070 u=srikarachanta |  changed: [test2]
+2017-08-13 22:29:57,666 p=26070 u=srikarachanta |  changed: [test1]
+2017-08-13 22:29:57,672 p=26070 u=srikarachanta |  TASK [install-machineagent : Ensure machine agent file is executable] *******************************************************************************************************************
+2017-08-13 22:29:58,493 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:29:58,930 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:29:58,937 p=26070 u=srikarachanta |  TASK [install-javaagent : include_vars] *************************************************************************************************************************************************
+2017-08-13 22:29:58,970 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:29:58,975 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:29:58,984 p=26070 u=srikarachanta |  TASK [install-javaagent : Gathering facts] **********************************************************************************************************************************************
+2017-08-13 22:30:02,672 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:30:02,769 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:30:02,774 p=26070 u=srikarachanta |  TASK [install-javaagent : install tools and pre-requisites for RedHat variants] *********************************************************************************************************
+2017-08-13 22:30:02,812 p=26070 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 22:30:02,818 p=26070 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 22:30:02,824 p=26070 u=srikarachanta |  TASK [install-javaagent : install tools and pre-requisites for Debian variants] *********************************************************************************************************
+2017-08-13 22:30:06,306 p=26070 u=srikarachanta |  ok: [test1] => (item=[u'ntp', u'vim', u'default-jdk'])
+2017-08-13 22:30:06,731 p=26070 u=srikarachanta |  ok: [test2] => (item=[u'ntp', u'vim', u'default-jdk'])
+2017-08-13 22:30:06,740 p=26070 u=srikarachanta |  TASK [install-javaagent : Ensures /home/vagrant/appdynamics/javaagent/ dir exists] ******************************************************************************************************
+2017-08-13 22:30:07,564 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:30:07,672 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:30:07,678 p=26070 u=srikarachanta |  TASK [install-javaagent : move files] ***************************************************************************************************************************************************
+2017-08-13 22:30:08,620 p=26070 u=srikarachanta |  ok: [test2]
+2017-08-13 22:30:08,798 p=26070 u=srikarachanta |  ok: [test1]
+2017-08-13 22:30:08,804 p=26070 u=srikarachanta |  TASK [install-javaagent : Unzip app agent file] *****************************************************************************************************************************************
+2017-08-13 22:30:11,929 p=26070 u=srikarachanta |  changed: [test2]
+2017-08-13 22:30:11,975 p=26070 u=srikarachanta |  changed: [test1]
+2017-08-13 22:30:11,978 p=26070 u=srikarachanta |  	to retry, use: --limit @/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/install_agents_playbook.retry
+
+2017-08-13 22:30:11,979 p=26070 u=srikarachanta |  PLAY RECAP ******************************************************************************************************************************************************************************
+2017-08-13 22:30:11,979 p=26070 u=srikarachanta |  test1                      : ok=13   changed=2    unreachable=0    failed=0   
+2017-08-13 22:30:11,979 p=26070 u=srikarachanta |  test2                      : ok=13   changed=2    unreachable=0    failed=0   
+2017-08-13 22:30:11,979 p=26070 u=srikarachanta |  test3                      : ok=2    changed=0    unreachable=0    failed=1   
+2017-08-13 22:30:11,979 p=26070 u=srikarachanta |  test4                      : ok=5    changed=3    unreachable=0    failed=1   
+2017-08-13 22:34:18,305 p=26787 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ********************************************************************************************************************************************
+2017-08-13 22:34:18,336 p=26787 u=srikarachanta |  TASK [install-machineagent : include_vars] **********************************************************************************************************************************************
+2017-08-13 22:34:18,377 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:18,378 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:18,386 p=26787 u=srikarachanta |  ok: [test3]
+2017-08-13 22:34:18,392 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:18,396 p=26787 u=srikarachanta |  TASK [install-machineagent : Gathering facts] *******************************************************************************************************************************************
+2017-08-13 22:34:23,460 p=26787 u=srikarachanta |  ok: [test3]
+2017-08-13 22:34:23,957 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:24,091 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:24,142 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:24,148 p=26787 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for RedHat variants] ******************************************************************************************************
+2017-08-13 22:34:24,194 p=26787 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 22:34:24,200 p=26787 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 22:34:26,669 p=26787 u=srikarachanta |  failed: [test3] (item=[u'ntp', u'vim', u'java', u'unzip', u'libselinux-python']) => {"changed": false, "failed": true, "item": ["ntp", "vim", "java", "unzip", "libselinux-python"], "msg": "The following packages have pending transactions: ntp-x86_64", "rc": 125, "results": []}
+2017-08-13 22:34:32,130 p=26787 u=srikarachanta |  changed: [test4] => (item=[u'ntp', u'vim', u'java', u'unzip', u'libselinux-python'])
+2017-08-13 22:34:32,138 p=26787 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for Debian variants] ******************************************************************************************************
+2017-08-13 22:34:32,208 p=26787 u=srikarachanta |  skipping: [test4] => (item=[]) 
+2017-08-13 22:34:35,238 p=26787 u=srikarachanta |  ok: [test1] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-13 22:34:35,463 p=26787 u=srikarachanta |  ok: [test2] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-13 22:34:35,471 p=26787 u=srikarachanta |  TASK [install-machineagent : Ensures /home/vagrant/appdynamics/machineagent/ dir exists] ************************************************************************************************
+2017-08-13 22:34:36,668 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:37,259 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:37,473 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:37,482 p=26787 u=srikarachanta |  TASK [install-machineagent : move files] ************************************************************************************************************************************************
+2017-08-13 22:34:38,561 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:38,583 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:39,968 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:39,975 p=26787 u=srikarachanta |  TASK [install-machineagent : Unzip machine agent file] **********************************************************************************************************************************
+2017-08-13 22:34:48,026 p=26787 u=srikarachanta |  changed: [test4]
+2017-08-13 22:34:48,756 p=26787 u=srikarachanta |  changed: [test2]
+2017-08-13 22:34:48,920 p=26787 u=srikarachanta |  changed: [test1]
+2017-08-13 22:34:48,927 p=26787 u=srikarachanta |  TASK [install-machineagent : Ensure machine agent file is executable] *******************************************************************************************************************
+2017-08-13 22:34:49,806 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:49,913 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:50,781 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:50,788 p=26787 u=srikarachanta |  TASK [install-javaagent : include_vars] *************************************************************************************************************************************************
+2017-08-13 22:34:50,820 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:50,830 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:50,840 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:50,851 p=26787 u=srikarachanta |  TASK [install-javaagent : Gathering facts] **********************************************************************************************************************************************
+2017-08-13 22:34:53,046 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:34:53,048 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:34:53,988 p=26787 u=srikarachanta |  ok: [test4]
+2017-08-13 22:34:53,995 p=26787 u=srikarachanta |  TASK [install-javaagent : install tools and pre-requisites for RedHat variants] *********************************************************************************************************
+2017-08-13 22:34:54,048 p=26787 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 22:34:54,056 p=26787 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 22:34:57,535 p=26787 u=srikarachanta |  ok: [test4] => (item=[u'ntp', u'vim', u'java', u'unzip', u'libselinux-python'])
+2017-08-13 22:34:57,542 p=26787 u=srikarachanta |  TASK [install-javaagent : install tools and pre-requisites for Debian variants] *********************************************************************************************************
+2017-08-13 22:34:57,608 p=26787 u=srikarachanta |  skipping: [test4] => (item=[]) 
+2017-08-13 22:35:00,202 p=26787 u=srikarachanta |  ok: [test1] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-13 22:35:00,607 p=26787 u=srikarachanta |  ok: [test2] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-13 22:35:00,615 p=26787 u=srikarachanta |  TASK [install-javaagent : Ensures /home/vagrant/appdynamics/javaagent/ dir exists] ******************************************************************************************************
+2017-08-13 22:35:01,633 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:35:01,634 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:35:02,864 p=26787 u=srikarachanta |  changed: [test4]
+2017-08-13 22:35:02,870 p=26787 u=srikarachanta |  TASK [install-javaagent : move files] ***************************************************************************************************************************************************
+2017-08-13 22:35:03,775 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:35:04,146 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:35:09,958 p=26787 u=srikarachanta |  changed: [test4]
+2017-08-13 22:35:09,966 p=26787 u=srikarachanta |  TASK [install-javaagent : Unzip app agent file] *****************************************************************************************************************************************
+2017-08-13 22:35:12,391 p=26787 u=srikarachanta |  ok: [test2]
+2017-08-13 22:35:12,855 p=26787 u=srikarachanta |  ok: [test1]
+2017-08-13 22:35:15,525 p=26787 u=srikarachanta |  changed: [test4]
+2017-08-13 22:35:15,529 p=26787 u=srikarachanta |  	to retry, use: --limit @/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/install_agents_playbook.retry
+
+2017-08-13 22:35:15,530 p=26787 u=srikarachanta |  PLAY RECAP ******************************************************************************************************************************************************************************
+2017-08-13 22:35:15,530 p=26787 u=srikarachanta |  test1                      : ok=13   changed=1    unreachable=0    failed=0   
+2017-08-13 22:35:15,530 p=26787 u=srikarachanta |  test2                      : ok=13   changed=1    unreachable=0    failed=0   
+2017-08-13 22:35:15,530 p=26787 u=srikarachanta |  test3                      : ok=2    changed=0    unreachable=0    failed=1   
+2017-08-13 22:35:15,531 p=26787 u=srikarachanta |  test4                      : ok=13   changed=5    unreachable=0    failed=0   
+2017-08-13 22:47:34,704 p=28266 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ********************************************************************************************************************************************
+2017-08-13 22:47:34,735 p=28266 u=srikarachanta |  TASK [configureHost : Gathering facts] **************************************************************************************************************************************************
+2017-08-13 22:47:40,645 p=28266 u=srikarachanta |  ok: [test2]
+2017-08-13 22:47:41,689 p=28266 u=srikarachanta |  ok: [test1]
+2017-08-13 22:47:41,723 p=28266 u=srikarachanta |  ok: [test3]
+2017-08-13 22:47:41,811 p=28266 u=srikarachanta |  ok: [test4]
+2017-08-13 22:47:41,816 p=28266 u=srikarachanta |  TASK [configureHost : install system updates for RedHat variants] ***********************************************************************************************************************
+2017-08-13 22:47:41,850 p=28266 u=srikarachanta |  skipping: [test1]
+2017-08-13 22:47:41,851 p=28266 u=srikarachanta |  skipping: [test2]
+2017-08-13 22:55:09,367 p=28266 u=srikarachanta |  changed: [test4]
+2017-08-13 22:57:10,608 p=28266 u=srikarachanta |  changed: [test3]
+2017-08-13 22:57:10,615 p=28266 u=srikarachanta |  TASK [configureHost : install system updates for Debian variants] ***********************************************************************************************************************
+2017-08-13 22:57:10,659 p=28266 u=srikarachanta |  skipping: [test3]
+2017-08-13 22:57:10,674 p=28266 u=srikarachanta |  skipping: [test4]
+2017-08-13 23:04:18,033 p=28266 u=srikarachanta |  changed: [test2]
+2017-08-13 23:04:20,488 p=28266 u=srikarachanta |  changed: [test1]
+2017-08-13 23:04:20,496 p=28266 u=srikarachanta |  TASK [configureHost : install tools and pre-requisites for RedHat variants] *************************************************************************************************************
+2017-08-13 23:04:20,532 p=28266 u=srikarachanta |  skipping: [test1] => (item=[]) 
+2017-08-13 23:04:20,537 p=28266 u=srikarachanta |  skipping: [test2] => (item=[]) 
+2017-08-13 23:05:13,631 p=28266 u=srikarachanta |  changed: [test4] => (item=[u'ntp', u'vim', u'java', u'unzip', u'libselinux-python'])
+2017-08-13 23:06:08,207 p=28266 u=srikarachanta |  changed: [test3] => (item=[u'ntp', u'vim', u'java', u'unzip', u'libselinux-python'])
+2017-08-13 23:06:08,213 p=28266 u=srikarachanta |  TASK [configureHost : install tools and pre-requisites for Debian variants] *************************************************************************************************************
+2017-08-13 23:06:08,274 p=28266 u=srikarachanta |  skipping: [test3] => (item=[]) 
+2017-08-13 23:06:08,283 p=28266 u=srikarachanta |  skipping: [test4] => (item=[]) 
+2017-08-13 23:08:27,892 p=28266 u=srikarachanta |  changed: [test2] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-13 23:08:28,353 p=28266 u=srikarachanta |  changed: [test1] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-13 23:08:28,357 p=28266 u=srikarachanta |  PLAY RECAP ******************************************************************************************************************************************************************************
+2017-08-13 23:08:28,357 p=28266 u=srikarachanta |  test1                      : ok=3    changed=2    unreachable=0    failed=0   
+2017-08-13 23:08:28,357 p=28266 u=srikarachanta |  test2                      : ok=3    changed=2    unreachable=0    failed=0   
+2017-08-13 23:08:28,357 p=28266 u=srikarachanta |  test3                      : ok=3    changed=2    unreachable=0    failed=0   
+2017-08-13 23:08:28,357 p=28266 u=srikarachanta |  test4                      : ok=3    changed=2    unreachable=0    failed=0   
+2017-08-13 23:11:23,117 p=30244 u=srikarachanta |  PLAY [configure javaagent for a specific controller and application] ********************************************************************************************************************
+2017-08-13 23:11:23,145 p=30244 u=srikarachanta |  TASK [start-machineagent : include_vars] ************************************************************************************************************************************************
+2017-08-13 23:11:23,183 p=30244 u=srikarachanta |  ok: [test1]
+2017-08-13 23:11:23,184 p=30244 u=srikarachanta |  ok: [test2]
+2017-08-13 23:11:23,192 p=30244 u=srikarachanta |  ok: [test3]
+2017-08-13 23:11:23,199 p=30244 u=srikarachanta |  ok: [test4]
+2017-08-13 23:11:23,208 p=30244 u=srikarachanta |  TASK [start-machineagent : Gathering facts] *********************************************************************************************************************************************
+2017-08-13 23:11:27,803 p=30244 u=srikarachanta |  ok: [test3]
+2017-08-13 23:11:28,658 p=30244 u=srikarachanta |  ok: [test4]
+2017-08-13 23:11:29,352 p=30244 u=srikarachanta |  ok: [test2]
+2017-08-13 23:11:29,769 p=30244 u=srikarachanta |  ok: [test1]
+2017-08-13 23:11:29,777 p=30244 u=srikarachanta |  TASK [start-machineagent : Kill process if running] *************************************************************************************************************************************
+2017-08-13 23:11:30,907 p=30244 u=srikarachanta |  fatal: [test2]: FAILED! => {"changed": true, "cmd": "kill -9 $(ps aux | grep 'machineagent.jar' | awk '{print $2}')", "delta": "0:00:00.089257", "end": "2017-08-14 06:11:30.609898", "failed": true, "rc": -9, "start": "2017-08-14 06:11:30.520641", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-08-13 23:11:30,908 p=30244 u=srikarachanta |  ...ignoring
+2017-08-13 23:11:31,087 p=30244 u=srikarachanta |  fatal: [test1]: FAILED! => {"changed": true, "cmd": "kill -9 $(ps aux | grep 'machineagent.jar' | awk '{print $2}')", "delta": "0:00:00.079261", "end": "2017-08-14 06:11:30.830884", "failed": true, "rc": -9, "start": "2017-08-14 06:11:30.751623", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-08-13 23:11:31,087 p=30244 u=srikarachanta |  ...ignoring
+2017-08-13 23:11:31,604 p=30244 u=srikarachanta |  fatal: [test3]: FAILED! => {"changed": true, "cmd": "kill -9 $(ps aux | grep 'machineagent.jar' | awk '{print $2}')", "delta": "0:00:00.167784", "end": "2017-08-14 06:11:30.178419", "failed": true, "rc": -9, "start": "2017-08-14 06:11:30.010635", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-08-13 23:11:31,604 p=30244 u=srikarachanta |  ...ignoring
+2017-08-13 23:11:31,723 p=30244 u=srikarachanta |  fatal: [test4]: FAILED! => {"changed": true, "cmd": "kill -9 $(ps aux | grep 'machineagent.jar' | awk '{print $2}')", "delta": "0:00:00.172698", "end": "2017-08-14 06:11:30.366995", "failed": true, "rc": -9, "start": "2017-08-14 06:11:30.194297", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-08-13 23:11:31,723 p=30244 u=srikarachanta |  ...ignoring
+2017-08-13 23:11:31,731 p=30244 u=srikarachanta |  TASK [start-machineagent : Starts the machine agent] ************************************************************************************************************************************
+2017-08-13 23:11:33,846 p=30244 u=srikarachanta |  changed: [test2]
+2017-08-13 23:11:33,847 p=30244 u=srikarachanta |  changed: [test1]
+2017-08-13 23:11:34,254 p=30244 u=srikarachanta |  changed: [test3]
+2017-08-13 23:11:34,255 p=30244 u=srikarachanta |  changed: [test4]
+2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  PLAY RECAP ******************************************************************************************************************************************************************************
+2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test1                      : ok=4    changed=2    unreachable=0    failed=0   
+2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test2                      : ok=4    changed=2    unreachable=0    failed=0   
+2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test3                      : ok=4    changed=2    unreachable=0    failed=0   
+2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test4                      : ok=4    changed=2    unreachable=0    failed=0   

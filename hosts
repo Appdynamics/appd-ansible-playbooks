@@ -1,0 +1,12 @@
+[local]
+localhost   ansible_connection=local
+
+[homelab]
+test1
+test2
+test3
+test4
+
+
+[machine-agent]
+test1

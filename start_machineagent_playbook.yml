@@ -1,0 +1,7 @@
+---
+- name: configure javaagent for a specific controller and application
+  hosts: homelab
+  gather_facts: no
+  become: yes
+  roles:
+     - start-machineagent

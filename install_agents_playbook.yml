@@ -1,0 +1,8 @@
+---
+- name: Setup newly minted vagrant linux host
+  hosts: homelab
+  gather_facts: no
+  become: yes
+  roles:
+     - install-machineagent
+     - install-javaagent

@@ -1,0 +1,158 @@
+<activities>
+
+<producer>
+        <instrumentation>
+            <class-name>com.apple.store.domain.director.balance.AsyncHTTPClient</class-name>
+            <method-name>submitRequest</method-name>
+            <match-type>MATCHES_CLASS</match-type>
+        </instrumentation>
+        <identifiers>
+            <identifier name="Hostname">
+                <data-gatherer-type>POSITION</data-gatherer-type>
+                <getter-chain>description</getter-chain>
+                <transformer-type>GETTER_METHODS</transformer-type>
+                <position>0</position>
+                <name>Hostname</name>
+            </identifier>
+        </identifiers>
+        <correlation>
+            <payload-pointer>
+                <data-gatherer-type>POSITION</data-gatherer-type>
+                <getter-chain>getHttpRequest</getter-chain>
+                <position>1</position>
+                <transformer-type>GETTER_METHODS</transformer-type>
+            </payload-pointer>
+            <payload-operation>
+                <access-type>method</access-type>
+                <param-types>java.lang.String,java.lang.String</param-types>
+                <access-method>addHeader</access-method>
+            </payload-operation>
+        </correlation>
+    </producer>
+
+    <!--
+    <naming-config>
+        <naming-rule enabled="true" priority="10">
+            <data-gatherer-config>
+                <name></name>
+                <data-gatherer-type>INVOKED|RETURN|POSITION</data-gatherer-type>
+                <field-name></field-name>
+                <user-defined-name></user-defined-name>
+                <getter-chain></getter-chain>
+                <position></position>
+                <transformer-type>TO_STRING|SIMPLE_CLASS_NAME|FIELD_NAME|GETTER_METHODS|USER_DEFINED_NAME
+                </transformer-type>
+            </data-gatherer-config>
+            <include-packages>
+                <include-package match-type="" match-pattern=""/>
+            </include-packages>
+            <exclude-packages>
+                <exclude-package match-type="" match-pattern=""/>
+            </exclude-packages>
+            <include-names>
+                <include-name match-type="" match-pattern=""/>
+            </include-names>
+            <exclude-names>
+                <exclude-name match-type="" match-pattern=""/>
+            </exclude-names>
+        </naming-rule>
+    </naming-config>
+
+        <producer enabled="true" priority="10" in-process="true" apply-instrumentation-on-method-end="true"
+                  activity-type="Queue_Submit">
+            <instrumentation>
+                <class-name></class-name>
+                <method-name></method-name>
+                <match-type></match-type>
+                <param-types></param-types>
+            </instrumentation>
+            <identifiers>
+                <identifier>
+                    <name></name>
+                    <data-gatherer-type>INVOKED|RETURN|POSITION</data-gatherer-type>
+                    <field-name></field-name>
+                    <user-defined-name></user-defined-name>
+                    <getter-chain></getter-chain>
+                    <position></position>
+                    <transformer-type>TO_STRING|SIMPLE_CLASS_NAME|FIELD_NAME|GETTER_METHODS|USER_DEFINED_NAME</transformer-type>
+                </identifier>
+            </identifiers>
+            <correlation>
+                <instrumentation>
+                    <class-name></class-name>
+                    <method-name></method-name>
+                    <match-type></match-type>
+                    <param-types></param-types>
+                </instrumentation>
+                <payload-pointer>
+                    <data-gatherer-config>
+                        <name></name>
+                        <data-gatherer-type>INVOKED|RETURN|POSITION</data-gatherer-type>
+                        <field-name></field-name>
+                        <user-defined-name></user-defined-name>
+                        <getter-chain></getter-chain>
+                        <position></position>
+                        <transformer-type>TO_STRING|SIMPLE_CLASS_NAME|FIELD_NAME|GETTER_METHODS|USER_DEFINED_NAME
+                        </transformer-type>
+                    </data-gatherer-config>
+                </payload-pointer>
+                <payload-operation>
+                    <access-type>field|method</access-type>
+                    <param-types>String|Object</param-types>
+                    <access-method></access-method>
+                </payload-operation>
+                <validator-config>
+                    <validator
+                            match-type="STARTSWITH|ENDSWITH|CONTAINS|EQUALS|REGEX|INLIST|NOTEMPTY|INHERITS_FROM_CLASS|IMPLEMENTS_INTERFACE|MATCHES_CLASS|HAS_ANNOTATION"
+                            match-pattern="">
+                        <data-gatherer-config>
+                            <name></name>
+                            <data-gatherer-type>INVOKED|RETURN|POSITION</data-gatherer-type>
+                            <field-name></field-name>
+                            <user-defined-name></user-defined-name>
+                            <getter-chain></getter-chain>
+                            <position></position>
+                            <transformer-type>TO_STRING|SIMPLE_CLASS_NAME|FIELD_NAME|GETTER_METHODS|USER_DEFINED_NAME
+                            </transformer-type>
+                        </data-gatherer-config>
+                    </validator>
+                </validator-config>
+            </correlation>
+        </producer>
+        <consumer enabled="true" priority="10" in-process="true" apply-instrumentation-on-method-end="true"
+                  activity-processed-in-loop="true">
+            <instrumentation>
+                <class-name></class-name>
+                <method-name></method-name>
+                <match-type></match-type>
+                <param-types></param-types>
+            </instrumentation>
+            <correlation entry-on-different-thread="true">
+                <instrumentation>
+                    <class-name></class-name>
+                    <method-name></method-name>
+                    <match-type></match-type>
+                    <param-types></param-types>
+                </instrumentation>
+                <payload-pointer>
+                    <data-gatherer-config>
+                        <name></name>
+                        <data-gatherer-type>INVOKED|RETURN|POSITION</data-gatherer-type>
+                        <field-name></field-name>
+                        <user-defined-name></user-defined-name>
+                        <getter-chain></getter-chain>
+                        <position></position>
+                        <transformer-type>TO_STRING|SIMPLE_CLASS_NAME|FIELD_NAME|GETTER_METHODS|USER_DEFINED_NAME
+                        </transformer-type>
+                    </data-gatherer-config>
+                </payload-pointer>
+                <payload-operation>
+                    <access-type>field|method</access-type>
+                    <param-types>String|Object</param-types>
+                    <access-methods></access-methods>
+                </payload-operation>
+            </correlation>
+        </consumer>
+
+    -->
+</activities>

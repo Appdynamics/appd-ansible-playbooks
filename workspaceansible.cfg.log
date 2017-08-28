@@ -280,3 +280,75 @@ The offending line appears to be:
 2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test2                      : ok=4    changed=2    unreachable=0    failed=0   
 2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test3                      : ok=4    changed=2    unreachable=0    failed=0   
 2017-08-13 23:11:34,260 p=30244 u=srikarachanta |  test4                      : ok=4    changed=2    unreachable=0    failed=0   
+2017-08-26 21:13:41,786 p=36037 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ******************************************************************************
+2017-08-26 21:13:41,825 p=36037 u=srikarachanta |  TASK [configureHost : Gathering facts] ************************************************************************************
+2017-08-26 21:13:42,582 p=36037 u=srikarachanta |  fatal: [192.168.1.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", "unreachable": true}
+2017-08-26 21:13:42,583 p=36037 u=srikarachanta |  	to retry, use: --limit @/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/configureHost_playbook.retry
+
+2017-08-26 21:13:42,584 p=36037 u=srikarachanta |  PLAY RECAP ****************************************************************************************************************
+2017-08-26 21:13:42,584 p=36037 u=srikarachanta |  192.168.1.90               : ok=0    changed=0    unreachable=1    failed=0   
+2017-08-26 21:20:24,806 p=37234 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ******************************************************************************
+2017-08-26 21:20:24,835 p=37234 u=srikarachanta |  TASK [configureHost : Gathering facts] ************************************************************************************
+2017-08-26 21:20:25,587 p=37234 u=srikarachanta |  fatal: [192.168.1.90]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", "unreachable": true}
+2017-08-26 21:20:25,589 p=37234 u=srikarachanta |  	to retry, use: --limit @/Users/srikarachanta/Documents/WD/Apple/AnsibleTraining/ansiblehomelab/configureHost_playbook.retry
+
+2017-08-26 21:20:25,589 p=37234 u=srikarachanta |  PLAY RECAP ****************************************************************************************************************
+2017-08-26 21:20:25,589 p=37234 u=srikarachanta |  192.168.1.90               : ok=0    changed=0    unreachable=1    failed=0   
+2017-08-26 21:22:34,383 p=37625 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ******************************************************************************
+2017-08-26 21:22:34,410 p=37625 u=srikarachanta |  TASK [configureHost : Gathering facts] ************************************************************************************
+2017-08-26 21:22:42,257 p=37625 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:22:42,262 p=37625 u=srikarachanta |  TASK [configureHost : install system updates for RedHat variants] *********************************************************
+2017-08-26 21:22:42,283 p=37625 u=srikarachanta |  skipping: [192.168.1.90]
+2017-08-26 21:22:42,288 p=37625 u=srikarachanta |  TASK [configureHost : install system updates for Debian variants] *********************************************************
+2017-08-26 21:29:03,595 p=37625 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:29:03,600 p=37625 u=srikarachanta |  TASK [configureHost : install tools and pre-requisites for RedHat variants] ***********************************************
+2017-08-26 21:29:03,637 p=37625 u=srikarachanta |  skipping: [192.168.1.90] => (item=[]) 
+2017-08-26 21:29:03,641 p=37625 u=srikarachanta |  TASK [configureHost : install tools and pre-requisites for Debian variants] ***********************************************
+2017-08-26 21:29:11,166 p=37625 u=srikarachanta |  changed: [192.168.1.90] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-26 21:29:11,168 p=37625 u=srikarachanta |  PLAY RECAP ****************************************************************************************************************
+2017-08-26 21:29:11,168 p=37625 u=srikarachanta |  192.168.1.90               : ok=3    changed=2    unreachable=0    failed=0   
+2017-08-26 21:30:52,908 p=39056 u=srikarachanta |  PLAY [Setup newly minted vagrant linux host] ******************************************************************************
+2017-08-26 21:30:52,938 p=39056 u=srikarachanta |  TASK [install-machineagent : include_vars] ********************************************************************************
+2017-08-26 21:30:52,965 p=39056 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:30:52,968 p=39056 u=srikarachanta |  TASK [install-machineagent : Gathering facts] *****************************************************************************
+2017-08-26 21:30:57,833 p=39056 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:30:57,838 p=39056 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for RedHat variants] ****************************************
+2017-08-26 21:30:57,874 p=39056 u=srikarachanta |  skipping: [192.168.1.90] => (item=[]) 
+2017-08-26 21:30:57,878 p=39056 u=srikarachanta |  TASK [install-machineagent : install tools and pre-requisites for Debian variants] ****************************************
+2017-08-26 21:31:02,783 p=39056 u=srikarachanta |  ok: [192.168.1.90] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-26 21:31:02,790 p=39056 u=srikarachanta |  TASK [install-machineagent : Ensures /home/vagrant/appdynamics/machineagent/ dir exists] **********************************
+2017-08-26 21:31:03,656 p=39056 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:31:03,664 p=39056 u=srikarachanta |  TASK [install-machineagent : move files] **********************************************************************************
+2017-08-26 21:31:34,003 p=39056 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:31:34,011 p=39056 u=srikarachanta |  TASK [install-machineagent : Unzip machine agent file] ********************************************************************
+2017-08-26 21:31:40,449 p=39056 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:31:40,455 p=39056 u=srikarachanta |  TASK [install-machineagent : Ensure machine agent file is executable] *****************************************************
+2017-08-26 21:31:41,285 p=39056 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:31:41,290 p=39056 u=srikarachanta |  TASK [install-javaagent : include_vars] ***********************************************************************************
+2017-08-26 21:31:41,319 p=39056 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:31:41,323 p=39056 u=srikarachanta |  TASK [install-javaagent : Gathering facts] ********************************************************************************
+2017-08-26 21:31:43,343 p=39056 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:31:43,348 p=39056 u=srikarachanta |  TASK [install-javaagent : install tools and pre-requisites for RedHat variants] *******************************************
+2017-08-26 21:31:43,386 p=39056 u=srikarachanta |  skipping: [192.168.1.90] => (item=[]) 
+2017-08-26 21:31:43,390 p=39056 u=srikarachanta |  TASK [install-javaagent : install tools and pre-requisites for Debian variants] *******************************************
+2017-08-26 21:31:45,840 p=39056 u=srikarachanta |  ok: [192.168.1.90] => (item=[u'ntp', u'vim', u'unzip', u'default-jdk'])
+2017-08-26 21:31:45,848 p=39056 u=srikarachanta |  TASK [install-javaagent : Ensures /home/vagrant/appdynamics/javaagent/ dir exists] ****************************************
+2017-08-26 21:31:46,925 p=39056 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:31:46,931 p=39056 u=srikarachanta |  TASK [install-javaagent : move files] *************************************************************************************
+2017-08-26 21:31:53,220 p=39056 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:31:53,225 p=39056 u=srikarachanta |  TASK [install-javaagent : Unzip app agent file] ***************************************************************************
+2017-08-26 21:31:55,538 p=39056 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:31:55,540 p=39056 u=srikarachanta |  PLAY RECAP ****************************************************************************************************************
+2017-08-26 21:31:55,540 p=39056 u=srikarachanta |  192.168.1.90               : ok=13   changed=6    unreachable=0    failed=0   
+2017-08-26 21:32:27,873 p=39462 u=srikarachanta |  PLAY [configure javaagent for a specific controller and application] ******************************************************
+2017-08-26 21:32:27,901 p=39462 u=srikarachanta |  TASK [start-machineagent : include_vars] **********************************************************************************
+2017-08-26 21:32:27,925 p=39462 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:32:27,928 p=39462 u=srikarachanta |  TASK [start-machineagent : Gathering facts] *******************************************************************************
+2017-08-26 21:32:32,301 p=39462 u=srikarachanta |  ok: [192.168.1.90]
+2017-08-26 21:32:32,306 p=39462 u=srikarachanta |  TASK [start-machineagent : Kill process if running] ***********************************************************************
+2017-08-26 21:32:33,335 p=39462 u=srikarachanta |  fatal: [192.168.1.90]: FAILED! => {"changed": true, "cmd": "kill -9 $(ps aux | grep 'machineagent.jar' | awk '{print $2}')", "delta": "0:00:00.098858", "end": "2017-08-27 04:32:33.251250", "failed": true, "rc": -9, "start": "2017-08-27 04:32:33.152392", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+2017-08-26 21:32:33,336 p=39462 u=srikarachanta |  ...ignoring
+2017-08-26 21:32:33,340 p=39462 u=srikarachanta |  TASK [start-machineagent : Starts the machine agent] **********************************************************************
+2017-08-26 21:32:35,038 p=39462 u=srikarachanta |  changed: [192.168.1.90]
+2017-08-26 21:32:35,040 p=39462 u=srikarachanta |  PLAY RECAP ****************************************************************************************************************
+2017-08-26 21:32:35,041 p=39462 u=srikarachanta |  192.168.1.90               : ok=4    changed=2    unreachable=0    failed=0   

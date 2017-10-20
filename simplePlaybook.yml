@@ -1,0 +1,8 @@
+---
+- hosts: homelab
+
+  tasks:
+    - name: install ntp
+      become: yes
+      become_method: sudo
+      package: "name=ntp state=installed"

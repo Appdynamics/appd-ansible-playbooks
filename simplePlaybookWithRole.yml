@@ -1,0 +1,8 @@
+---
+- name: Simple Playbook
+  hosts: homelab
+  gather_facts: yes
+  become: yes
+  roles:
+     - installPython
+     - joshualund.golang

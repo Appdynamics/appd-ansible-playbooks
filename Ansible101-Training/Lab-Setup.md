@@ -37,3 +37,11 @@ vagrant-share
 vagrant-vbguest
 
 Two vagrant vms, centos-lab1 and ubuntu-lab1 are pre-configured to launch a ubuntu vm and a centos vm.
+
+Training Session 1:
+
+https://drive.google.com/a/appdynamics.com/file/d/0B0kjacaPxTJ5NWVPckxtRUh1dkE/view?usp=sharing
+
+Training Session 2:
+
+https://drive.google.com/a/appdynamics.com/file/d/0B0kjacaPxTJ5MUhBOGRYZVZMTEU/view?usp=sharing

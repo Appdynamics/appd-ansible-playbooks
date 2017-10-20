@@ -1,0 +1,7 @@
+sudoers_path: /etc/sudoers.d/vagrant
+vagrant_user_shell: /bin/bash
+vagrant_user_vagrant_password: "$1$re6ft8gy$PweYoLIPFrEo/y0OeVQyA/"
+vagrant_root_password_enabled : true
+vagrant_user_root_password: "$1$re6ft8gy$PweYoLIPFrEo/y0OeVQyA/"
+vagrant_home: /home/vagrant
+vagrant_libvirt_enabled: false                      
